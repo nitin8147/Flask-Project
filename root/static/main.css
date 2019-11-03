@@ -1,0 +1,136 @@
+body{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.vl {
+  border-left: 6px solid black;
+  height: 500px;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 3px;
+}
+
+.mycontainer {
+   margin:0 auto; /* this will center the page */
+   width:960px; /*  use your width here */
+}
+
+.bg-steel {
+  background-color: #A2D9CE;
+}
+
+.bg-steel2 {
+  background-color: #e6e6ff;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.mytable {
+    border-collapse: separate;
+    border-spacing: 1em;
+}
+
+.navbar-brand {
+  height: 50px;
+  padding: 0px 20px;
+}
+
+.navbar-brand2 {
+  position: absolute;
+  left: 47%;
+  margin-left: -50px !important;  /* 50% of your logo width */
+  display: block;
+}
+
+.glyphicon {
+    font-size: 30px;
+    padding: 10px 15px;
+}
+
+.a {
+  font-family: "Trattatello", fantasy, serif;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #A2D9CE;
+   color: white;
+   text-align: center;
+}

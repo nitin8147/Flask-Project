@@ -1,0 +1,207 @@
+{% extends "updatelayout.html" %}
+
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4"> Update Application Details - <b>{{ showdt.app }}({{ showdt.env }})</b></legend>
+            <div class="col-lg-12 text-center" style="background-color:lavenderblush;"><h5><i><b>Enter Host Info</b></i><h5></div>
+
+              <div class="form-group col-md-4 col-md-offset-4">
+                    {{ form.Machine_Name.label(class="form-control-label")}}
+                    {% if showdt is defined %}
+                      {{ form.Machine_Name(class="form-control  form-control-lg", value=showdt.machine) }}
+                    {% else %}
+                      {{ form.Machine_Name(class="form-control  form-control-lg") }}
+                    {% endif %}
+
+
+              </div>
+
+                <div class="form-group col-md-4 col-md-offset-4">
+                      {{ form.IPP_ADD.label(class="form-control-label") }}
+                      {% if showdt is defined %}
+                        {{ form.IPP_ADD(class="form-control  form-control-lg ", value=showdt.ip) }}
+                      {% else %}
+                        {{ form.IPP_ADD(class="form-control  form-control-lg ") }}
+                      {% endif %}
+
+                  </div>
+
+                  <div class="form-group col-md-4 col-md-offset-4">
+                        {{ form.Machine_User.label(class="form-control-label") }}
+                        {% if showdt is defined %}
+                          {{ form.Machine_User(class="form-control  form-control-lg", value=showdt.hostuser) }}
+                        {% else %}
+                          {{ form.Machine_User(class="form-control  form-control-lg") }}
+                        {% endif %}
+                  </div>
+                  <div class="form-group col-md-4 col-md-offset-4">
+                        {{ form.Machine_Password.label(class="form-control-label") }}
+                        {% if showdt is defined %}
+                          {{ form.Machine_Password(class="form-control  form-control-lg", value=showdt.hostpass) }}
+                        {% else %}
+                          {{ form.Machine_Password(class="form-control  form-control-lg") }}
+                        {% endif %}
+                    </div>
+                      <div class="col-lg-12 text-center" style="background-color:lavenderblush;"><h5><i><b>Enter Weblogic Info</b></i><h5></div>
+                    <div class="form-group col-md-4 col-md-offset-4">
+                          {{ form.Weblogic_User.label(class="form-control-label")}}
+                          {% if showdt is defined %}
+                            {{ form.Weblogic_User(class="form-control  form-control-lg", value=showdt.webuser) }}
+                          {% else %}
+                              {{ form.Weblogic_User(class="form-control  form-control-lg") }}
+                          {% endif %}
+                    </div>
+                    <div class="form-group col-md-4 col-md-offset-4">
+                            {{ form.Weblogic_Password.label(class="form-control-label") }}
+                            {% if showdt is defined %}
+                              {{ form.Weblogic_Password(class="form-control  form-control-lg", value=showdt.webpass) }}
+                            {% else %}
+                                {{ form.Weblogic_Password(class="form-control  form-control-lg") }}
+                            {% endif %}
+
+                    </div>
+                    <div class="form-group col-md-4 col-md-offset-4">
+                              {{ form.Weblogic_URL.label(class="form-control-label") }}
+                              {% if showdt is defined %}
+                                {{ form.Weblogic_URL(class="form-control  form-control-lg", value=showdt.weburl) }}
+                                {% else %}
+                                  {{ form.Weblogic_URL(class="form-control  form-control-lg") }}
+                              {% endif %}
+                    </div>
+                    <div class="form-group col-md-4 col-md-offset-4">
+                               {{ form.Weblogic_Proxy_URL.label(class="form-control-label") }}
+
+                               {% if showdt is defined %}
+                                 {{ form.Weblogic_Proxy_URL(class="form-control  form-control-lg", value=showdt.webproxyurl) }}
+                               {% else %}
+                                 {{ form.Weblogic_Proxy_URL(class="form-control  form-control-lg") }}
+                               {% endif %}
+                     </div>
+
+                   <div class="col-lg-12 text-center" style="background-color:lavenderblush;"><h5><i><b>Enter Datebase info</b></i><h5></div>
+
+
+                   <div class="form-group col-md-4 col-md-offset-4">
+                         {{ form.Database_Host.label(class="form-control-label") }}
+
+                         {% if showdt is defined %}
+                           {{ form.Database_Host(class="form-control  form-control-lg", value=showdt.dbhost) }}
+                         {% else %}
+                           {{ form.Database_Host(class="form-control  form-control-lg") }}
+                         {% endif %}
+
+                   </div>
+                   <div class="form-group col-md-4 col-md-offset-4">
+                         {{ form.Database_IP.label(class="form-control-label") }}
+
+                         {% if showdt is defined %}
+                           {{ form.Database_IP(class="form-control  form-control-lg", value=showdt.dbip) }}
+                         {% else %}
+                           {{ form.Database_IP(class="form-control  form-control-lg") }}
+                         {% endif %}
+
+                     </div>
+                     <div class="form-group col-md-4 col-md-offset-4">
+                           {{ form.Database_User.label(class="form-control-label")}}
+
+                           {% if showdt is defined %}
+                             {{ form.Database_User(class="form-control  form-control-lg", value=showdt.dbuser) }}
+                           {% else %}
+                             {{ form.Database_User(class="form-control  form-control-lg") }}
+                           {% endif %}
+
+                     </div>
+                     <div class="form-group col-md-4 col-md-offset-4">
+                             {{ form.Database_Password.label(class="form-control-label") }}
+
+                             {% if showdt is defined %}
+                               {{ form.Database_Password(class="form-control  form-control-lg", value=showdt.dbpass) }}
+                             {% else %}
+                               {{ form.Database_Password(class="form-control  form-control-lg") }}
+                             {% endif %}
+
+                     </div>
+                     <div class="form-group col-md-4 col-md-offset-4">
+                               {{ form.Database_Port.label(class="form-control-label") }}
+
+                               {% if showdt is defined %}
+                                 {{ form.Database_Port(class="form-control  form-control-lg", value=showdt.dbport) }}
+                               {% else %}
+                                 {{ form.Database_Port(class="form-control  form-control-lg") }}
+                               {% endif %}
+
+                   </div>
+                   <div class="form-group col-md-4 col-md-offset-4">
+                         {{ form.Database_SID.label(class="form-control-label") }}
+
+                         {% if showdt is defined %}
+                           {{ form.Database_SID(class="form-control  form-control-lg", value=showdt.dbsid) }}
+                         {% else %}
+                           {{ form.Database_SID(class="form-control  form-control-lg") }}
+                         {% endif %}
+
+                     </div>
+
+                 <div class="col-lg-12 text-center" style="background-color:lavenderblush;"><h5><i><b>Enter Certificate Info</b></i><h5></div>
+
+                     <div class="form-group col-md-4 col-md-offset-4">
+                           {{ form.Cert_Store_Path.label(class="form-control-label")}}
+
+                           {% if showdt is defined %}
+                             {{ form.Cert_Store_Path(class="form-control  form-control-lg", value=showdt.certstorepath) }}
+                           {% else %}
+                             {{ form.Cert_Store_Path(class="form-control  form-control-lg") }}
+                           {% endif %}
+
+                     </div>
+                     <div class="form-group col-md-4 col-md-offset-4">
+                             {{ form.Cert_Type.label(class="form-control-label") }}
+
+                             {% if showdt is defined %}
+                               {{ form.Cert_Type(class="form-control  form-control-lg", value=showdt.certtype) }}
+                             {% else %}
+                               {{ form.Cert_Type(class="form-control  form-control-lg") }}
+                             {% endif %}
+
+                     </div>
+                     <div class="form-group col-md-4 col-md-offset-4">
+                               {{ form.Cert_Store_Pass.label(class="form-control-label") }}
+
+                               {% if showdt is defined %}
+                                 {{ form.Cert_Store_Pass(class="form-control form-control-lg", value=showdt.certstorepass) }}
+                               {% else %}
+                                 {{ form.Cert_Store_Pass(class="form-control form-control-lg") }}
+                               {% endif %}
+                   </div>
+
+                   <div class="form-group col-md-4 col-md-offset-4">
+                           {{ form.Cert_Key_Pass.label(class="form-control-label") }}
+
+                           {% if showdt is defined %}
+                             {{ form.Cert_Key_Pass(class="form-control form-control-lg", value=showdt.certkeypass) }}
+                           {% else %}
+                             {{ form.Cert_Key_Pass(class="form-control form-control-lg") }}
+                           {% endif %}
+                   </div>
+              <div class="col-lg-12 text-center" style="background-color:lavenderblush;"><h5><i><b>Enter other Details</b></i><h5></div>
+                   <div class="form-group col-md-4 col-md-offset-4">
+                           {{ form.Other_Details.label(class="form-control-label") }}
+
+                           {% if showdt is defined %}
+                             {{ form.Other_Details(class="form-control form-control-lg", value=form.Other_Details.data )}}
+                           {% else %}
+                             {{ form.Other_Details(class="form-control form-control-lg") }}
+                           {% endif %}
+                   </div>
+
+         </fieldset>
+         <div class="form-group">
+             <input type="submit" class="btn btn-outline-info center-block btn-success" name="action" value="Submit">
+         </div>
+         <div class="border-top pt-3">
+     </form>
+ </div>
+ {% endblock content %}

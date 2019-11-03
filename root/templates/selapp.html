@@ -1,0 +1,66 @@
+{% extends "updatelayout.html" %}
+
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">
+      {{ message }}
+    </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<div class="content-section">
+    <form method="POST" action= "{{ url_for('home') }}">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4 well well-m" style="background-color:#FCF3CF"; ><center><font color="#D35400"> Select Application
+          and Environment </font></center> </legend>
+          <br><br>
+          <div class="form-group col-md-4 col-md-offset-4">
+            <label for="sel1">Choose Application</label>
+              <select class="form-control" id="sel1" name="appselect">
+                  <option>ABP</option>
+                  <option>CRM</option>
+                  <option>OMS</option>
+                  <option>OMNI</option>
+                  <option>SOLR</option>
+                  <option>WSF</option>
+                  <option>SOM</option>
+                  <option>USM</option>
+                  <option>AUA</option>
+                  <option>OSB</option>
+                  <option>CIAM</option>
+                  <option>MFT</option>
+                  <option>ETL</option>
+                  <option>DMAAS</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4 col-md-offset-4">
+              <label for="sel1">Choose Environment</label>
+                <select class="form-control" id="sel1" name=envselect>
+                    <option>SIT1</option>
+                    <option>SIT2</option>
+                    <option>SIT3</option>
+                    <option>SIT4</option>
+                    <option>PET1</option>
+                    <option>PET2</option>
+                    <option>TRN1</option>
+                    <option>TRN2</option>
+                  </select>
+              </div>
+              <div class="form-group col-md-4 col-md-offset-4">
+                <br>
+                <table class="mytable" align="center">
+                  <tr>
+                    <td>
+                  <input type="submit" class="btn btn-outline-info center-block btn-success" name="action" value="Search">
+                  </td>
+                  <td>
+                      <input type="submit" class="btn btn-outline-info center-block btn-success" name="action" value="Update">
+                  </td>
+              </div>
+
+          </form>
+</div>
+ {% endblock content %}
